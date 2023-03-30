@@ -1,0 +1,17 @@
+#include <stdio.h>
+#define MAX 1000
+#define MIN 0;
+
+int main(void) {
+
+	int x = 10;
+	const int y = 20;
+
+	MAX = 2000;
+	x = MAX - 1;
+	y = MAX - 2;			//y값은 변경 불가 but 변경을 시도했기 때문에 오류가 발생할 것
+
+	printf("range: %d ~ %d\n", MIN, MAX);
+
+	return 0;
+}
