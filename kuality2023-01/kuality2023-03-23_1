@@ -2,6 +2,8 @@
 #pragma warning(disable:4996)
 #pragma warning(disable:6031)
 
+//사칙연산 계산기 2가지 유형으로 만들어보기
+
 int main() {
 
 	int n1, n2, n3;
