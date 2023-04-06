@@ -1,0 +1,42 @@
+#include <stdio.h>
+#pragma warning(disable:4996)
+#pragma warning(disable:6031)
+
+
+int main(void) {
+    char x;
+    double a, b = 0.0, c = 0.0, d;
+
+    while (1) {
+        printf("학점 입력(다 입력했으면 x입력): ");
+        scanf(" %c", &x);
+        if (x == 'x')
+            break;
+        else if (x == 'A') {
+            a = 4.0;
+            b += a;
+            c++;
+        }
+        else if (x == 'B') {
+            a = 3.0;
+            b += a;
+            c++;
+        }
+        else if (x == 'C') {
+            a = 2.0;
+            b += a;
+            c++;
+        }
+    }
+    if (c == 0.0) {
+        printf("학점을 입력하지 않았습니다.\n");
+    }
+    else {
+        d = b / c;
+        printf("당신의 학점은 %.1f 입니다.\n", d);
+    }
+
+    return 0;
+}
+
+//'A+', 'B+'등을 입력받도록 만들면 "학점 입력(다 입력했으면 x입력): "이게 두번씩 출력됨 고칠 방법이...?
