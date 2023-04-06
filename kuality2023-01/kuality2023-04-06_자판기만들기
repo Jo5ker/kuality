@@ -1,0 +1,87 @@
+#include <stdio.h>
+#pragma warning(disable:4996)
+#pragma warning(disable:6031)
+
+int main(void) {
+
+	int number = 0, total_price = 0, money = 0, revenue = 0, change = 0;
+	int cola = 20, cider = 20, monster = 20, mountain_dew = 20, water = 20;
+
+	while (1) {
+		while (1) {
+			printf("\n--------------------------");
+			printf("\n1.콜라(1000원)\n2.사이다(900원)\n3.몬스터(2000원)\n4.마운틴듀(1200원)\n5.물(500원)\n6.선택 완료(계산)\n7.재고 확인\n8.수입\n");
+			scanf(" %d", &number);
+			if (number == 1) {
+				cola--;
+				if (cola == 0) {
+					printf("더이상 재고가 없습니다. 죄송합니다.");
+					break;
+				}
+				total_price += 1000;
+				printf("현재까지 투입된 금액: %d원 입니다", total_price);
+			}
+			else if (number == 2) {
+				cider--;
+				if (cider == 0) {
+					printf("더이상 재고가 없습니다. 죄송합니다.");
+					break;
+				}
+				total_price += 900;
+				printf("현재까지 투입된 금액: %d원 입니다", total_price);
+			}
+			else if (number == 3) {
+				monster--;
+				if (monster == 0) {
+					printf("더이상 재고가 없습니다. 죄송합니다.");
+					break;
+				}
+				total_price += 2000;
+				printf("현재까지 투입된 금액: %d원 입니다", total_price);
+			}
+			else if (number == 4) {
+				mountain_dew--;
+				if (mountain_dew == 0) {
+					printf("더이상 재고가 없습니다. 죄송합니다.");
+					break;
+				}
+				total_price += 1200;
+				printf("현재까지 투입된 금액: %d원 입니다", total_price);
+			}
+			else if (number == 5) {
+				water--;
+				if (water == 0) {
+					printf("더이상 재고가 없습니다. 죄송합니다.");
+					break;
+				}
+				total_price += 500;
+				printf("현재까지 투입된 금액: %d원 입니다", total_price);
+			}
+			else if (number == 7) {
+				printf("\n--------------------------");
+				printf("\n1.콜라(%d개)\n2.사이다(%d개)\n3.몬스터(%d개)\n4.마운틴듀(%d개)\n5.물(%d개)", cola, cider, monster, mountain_dew, water);
+			}
+			else if (number == 8) {
+				printf("\n현재까지의 수입: %d\n", revenue);
+			}
+			else if (number == 6) {
+				break;
+			}
+		}
+
+		printf("계산해야할 금액: %d", total_price);
+		printf("금액을 투입해 주세요");
+		scanf(" %d", &money);
+
+		if (total_price <= money) {
+			change = money - total_price;
+			printf("거스름돈: %d\n\n\n\n\n\n\n\n\n\n\n\n\n\n", change);
+			revenue += total_price;
+		}
+		else {
+			printf("\n\n\n\n\n\n\n\n\n\n\n잔액 부족\n처음부터 다시 해주세요");
+		}
+	}
+
+	return 0;
+}
