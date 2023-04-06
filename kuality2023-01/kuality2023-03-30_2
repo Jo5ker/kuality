@@ -1,0 +1,29 @@
+#include <stdio.h>
+#pragma warning(disable:4996)
+#pragma warning(disable:6031)
+
+//최대공약수 구하는 프로그램
+//중복되는 코드 제거, 대체 가능한 더 짧은 코드로 변경
+
+int gcd(int a, int b) {
+	if (b == 0) {
+		return a;
+	}
+	else {
+		return gcd(b, a % b);
+	}
+}
+
+int main() {
+	int result = gcd(24, 36);
+	printf("최대공약수: %d\n", result);
+
+	int result2 = gcd(15, 25);
+	printf("최대공약수: %d\n", result2);
+
+	int result3 = gcd(40, 60);
+	printf("최대공약수: %d\n", result3);
+
+	return 0;
+
+}
