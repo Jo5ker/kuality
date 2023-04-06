@@ -1,0 +1,14 @@
+#include <stdio.h>
+#pragma warning(disable:4996)
+#pragma warning(disable:6031)
+
+//main()은 원칙적으로 int main(int argc, char *argv[])로 작성해야함!!
+//main()은 너무 대충배운 초딩스럽다
+//int main(int argc, char *argv[])앞으로는 이렇게 쓰도록 하자!!
+
+int main(int argc, char *argv[]) {
+	printf("argc = %d\n", argc);
+	for (int ndx = 0; ndx != argc; ++ndx)
+		printf("argv[%d] --> %s\n", ndx, argv[ndx]);
+	printf("argv[argc] = %p\n", (void*)argv[argc]);
+}
