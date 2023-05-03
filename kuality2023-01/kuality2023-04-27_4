@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+
+	int arr[100];
+	printf("sizeof(int) -> %lu\n", sizeof(int));
+	printf("arr -> %p\n", arr);
+	printf("&arr[0] -> %p\n", &arr[0]);
+	printf("&arr[1] -> %p\n", &arr[1]);
+	printf("&arr[2] -> %p\n", &arr[2]);
+	printf("&arr[10] -> %p\n", &arr[10]);
+
+	char arr2[100];
+	printf("sizeof(char) -> %lu\n", sizeof(char));
+	printf("arr -> %p\n", arr2);
+	printf("&arr2[0] -> %p\n", &arr2[0]);
+	printf("&arr2[1] -> %p\n", &arr2[1]);
+	printf("&arr2[2] -> %p\n", &arr2[2]);
+	printf("&arr2[10] -> %p\n", &arr2[10]);
+
+	return 0;
+}
