@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+//크기가 10인 정수형 배열 arr 선언
+//for문을 이용하여 arr 배열을 index* index 로 초기화
+//ex): 0 -> 0, 1 -> 1, 2 -> 4, 3 -> 9, 4 -> 16
+//for문을 이용하여 출력하기
+
+int main() {
+
+	int i=0;
+	int arr[10] = { 0,1,2,3,4,5,6,7,8,9 };
+
+	for (i = 0; i < 10; i++) {
+		arr[i] = arr[i] * arr[i];
+	}
+
+	for (i = 0; i < 10; i++) {
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+
+	return 0;
+}
